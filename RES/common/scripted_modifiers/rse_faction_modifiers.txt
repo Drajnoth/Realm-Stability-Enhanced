@@ -1,0 +1,470 @@
+﻿
+common_faction_modifiers = {
+	# +/- 40 join weight at -/+100 opinion
+	opinion_modifier = {
+		who = root
+		opinion_target = $FACTION_TARGET$ 
+		multiplier = $OPINION_MULTIPLIER$
+		max = $MAX_OPINION$
+	}
+
+	# for each character.religion != factionTarget.religion add X join-score
+	pluralism_fundamentalism_modifier = {
+		ASTRAY_BASE_VALUE = 25
+		HOSTILE_BASE_VALUE = 50
+		EVIL_BASE_VALUE = 100
+		BASE_FAITH = faith
+		TARGET = $FACTION_TARGET$
+	}
+
+	# +25 join chance per sin, -25 join chance per virtue
+	legalism_virtue_and_sin_modifier = {
+		TARGET = $FACTION_TARGET$
+		SCORE_PER_TRAIT = 25
+	}
+
+	# -100 join chance from intimidation, -1000 join chance from terrified. This modifier doesn't apply if a faction is above the power threshold
+	intimidated_from_faction_modifier = {
+		TARGET = $FACTION_TARGET$
+		POWER =  $POWER$
+		THRESHOLD = $THRESHOLD$
+	}
+	
+	# Unity - House members are less likely to join factions against each other with high levels of unity
+	modifier = { # Friendly unity level
+		desc = "FACTION_REASON_unity_significantly_less_likely_claimant_factions"
+		add = -20
+		exists = root.house
+		exists = $FACTION_TARGET$.house
+		house = $FACTION_TARGET$.house
+		house = {
+			has_house_unity_parameter = unity_less_likely_factions
+		}
+	}
+	modifier = { # Harmonious unity level
+		desc = "FACTION_REASON_unity_significantly_less_likely_claimant_factions"
+		add = -40
+		exists = root.house
+		exists = $FACTION_TARGET$.house
+		house = $FACTION_TARGET$.house
+		house = {
+			has_house_unity_parameter = unity_significantly_less_likely_factions
+		}
+	}
+
+	# Debt: +10 to +60 join chance depending on how far in debt the top liege is
+	liege_debt_modifier = {
+		TARGET = $FACTION_TARGET$
+		SCORE_PER_DEBT_LEVEL = 10
+	}
+
+	# Difficulty Settings
+	modifier = { # Easy
+		desc = "FACTION_REASON_DIFFICULTY_EASY"
+		add = -50
+		has_game_rule = easy_difficulty
+		$FACTION_TARGET$ = {
+			is_ai = no
+		}
+	}
+	modifier = { # Very Easy
+		desc = "FACTION_REASON_DIFFICULTY_VERY_EASY"
+		add = -150
+		has_game_rule = very_easy_difficulty
+		$FACTION_TARGET$ = {
+			is_ai = no
+		}
+	}
+
+	# Realm Stability Settings
+	modifier = {
+		add = -0
+		has_game_rule = lesser_realm_stability
+	}
+	modifier = {
+		add = -0
+		has_game_rule = higher_realm_stability
+	}
+	modifier = {
+		add = -0
+		has_game_rule = extreme_realm_stability
+	}
+	modifier = {
+		add = -0
+		has_game_rule = realm_stability_ai_only_0
+		$FACTION_TARGET$ = {
+		is_ai = yes
+		}
+	}
+	modifier = {
+		add = -5
+		has_game_rule = realm_stability_ai_only_5
+		$FACTION_TARGET$ = {
+		is_ai = yes
+		}
+	}
+	modifier = {
+		add = -10
+		has_game_rule = realm_stability_ai_only_10
+		$FACTION_TARGET$ = {
+		is_ai = yes
+		}
+	}
+	modifier = {
+		add = -15
+		has_game_rule = realm_stability_ai_only_15
+		$FACTION_TARGET$ = {
+		is_ai = yes
+		}
+	}
+	modifier = {
+		add = -20
+		has_game_rule = realm_stability_ai_only_20
+		$FACTION_TARGET$ = {
+		is_ai = yes
+		}
+	}
+	modifier = {
+		add = -25
+		has_game_rule = realm_stability_ai_only_25
+		$FACTION_TARGET$ = {
+		is_ai = yes
+		}
+	}
+	modifier = {
+		add = -30
+		has_game_rule = realm_stability_ai_only_30
+		$FACTION_TARGET$ = {
+		is_ai = yes
+		}
+	}
+	modifier = {
+		add = -35
+		has_game_rule = realm_stability_ai_only_35
+		$FACTION_TARGET$ = {
+		is_ai = yes
+		}
+	}
+	modifier = {
+		add = -40
+		has_game_rule = realm_stability_ai_only_40
+		$FACTION_TARGET$ = {
+		is_ai = yes
+		}
+	}
+	modifier = {
+		add = -45
+		has_game_rule = realm_stability_ai_only_45
+		$FACTION_TARGET$ = {
+		is_ai = yes
+		}
+	}
+	modifier = {
+		add = -50
+		has_game_rule = higher_realm_stability_ai_only_50
+		$FACTION_TARGET$ = {
+		is_ai = yes
+		}
+	}
+	modifier = {
+		add = -55
+		has_game_rule = realm_stability_ai_only_55
+		$FACTION_TARGET$ = {
+		is_ai = yes
+		}
+	}
+	modifier = {
+		add = -60
+		has_game_rule = realm_stability_ai_only_60
+		$FACTION_TARGET$ = {
+		is_ai = yes
+		}
+	}
+	modifier = {
+		add = -65
+		has_game_rule = realm_stability_ai_only_65
+		$FACTION_TARGET$ = {
+		is_ai = yes
+		}
+	}
+	modifier = {
+		add = -70
+		has_game_rule = realm_stability_ai_only_70
+		$FACTION_TARGET$ = {
+		is_ai = yes
+		}
+	}
+	modifier = {
+		add = -75
+		has_game_rule = realm_stability_ai_only_75
+		$FACTION_TARGET$ = {
+		is_ai = yes
+		}
+	}
+	modifier = {
+		add = -80
+		has_game_rule = realm_stability_ai_only_80
+		$FACTION_TARGET$ = {
+		is_ai = yes
+		}
+	}
+	modifier = {
+		add = -85
+		has_game_rule = realm_stability_ai_only_85
+		$FACTION_TARGET$ = {
+		is_ai = yes
+		}
+	}
+	modifier = {
+		add = -90
+		has_game_rule = realm_stability_ai_only_90
+		$FACTION_TARGET$ = {
+		is_ai = yes
+		}
+	}
+	modifier = {
+		add = -95
+		has_game_rule = realm_stability_ai_only_95
+		$FACTION_TARGET$ = {
+		is_ai = yes
+		}
+	}
+	modifier = {
+		add = -100
+		has_game_rule = extreme_realm_stability_ai_only_100
+		$FACTION_TARGET$ = {
+		is_ai = yes
+		}
+	}
+	modifier = {
+		add = -10000
+		has_game_rule = ultra_realm_stability_ai_only_10000
+		$FACTION_TARGET$ = {
+		is_ai = yes
+		}
+	}
+	modifier = {
+		add = 1000
+		has_game_rule = chaos_realm_stability_ai_only
+		$FACTION_TARGET$ = {
+		is_ai = yes
+		}
+	}
+	modifier = {
+		add = -0
+		has_game_rule = realm_stability_player_only_0
+		$FACTION_TARGET$ = {
+		is_ai = no
+		}
+	}
+	modifier = {
+		add = -5
+		has_game_rule = realm_stability_player_only_5
+		$FACTION_TARGET$ = {
+		is_ai = no
+		}
+	}
+	modifier = {
+		add = -10
+		has_game_rule = realm_stability_player_only_10
+		$FACTION_TARGET$ = {
+		is_ai = no
+		}
+	}
+	modifier = {
+		add = -15
+		has_game_rule = realm_stability_player_only_15
+		$FACTION_TARGET$ = {
+		is_ai = no
+		}
+	}
+	modifier = {
+		add = -20
+		has_game_rule = realm_stability_player_only_20
+		$FACTION_TARGET$ = {
+		is_ai = no
+		}
+	}
+	modifier = {
+		add = -25
+		has_game_rule = realm_stability_player_only_25
+		$FACTION_TARGET$ = {
+		is_ai = no
+		}
+	}
+	modifier = {
+		add = -30
+		has_game_rule = realm_stability_player_only_30
+		$FACTION_TARGET$ = {
+		is_ai = no
+		}
+	}
+	modifier = {
+		add = -35
+		has_game_rule = realm_stability_player_only_35
+		$FACTION_TARGET$ = {
+		is_ai = no
+		}
+	}
+	modifier = {
+		add = -40
+		has_game_rule = realm_stability_player_only_40
+		$FACTION_TARGET$ = {
+		is_ai = no
+		}
+	}
+	modifier = {
+		add = -45
+		has_game_rule = realm_stability_player_only_45
+		$FACTION_TARGET$ = {
+		is_ai = no
+		}
+	}
+	modifier = {
+		add = -50
+		has_game_rule = realm_stability_player_only_50
+		$FACTION_TARGET$ = {
+		is_ai = no
+		}
+	}
+	modifier = {
+		add = -55
+		has_game_rule = realm_stability_player_only_55
+		$FACTION_TARGET$ = {
+		is_ai = no
+		}
+	}
+	modifier = {
+		add = -60
+		has_game_rule = realm_stability_player_only_60
+		$FACTION_TARGET$ = {
+		is_ai = no
+		}
+	}
+	modifier = {
+		add = -65
+		has_game_rule = realm_stability_player_only_65
+		$FACTION_TARGET$ = {
+		is_ai = no
+		}
+	}
+	modifier = {
+		add = -70
+		has_game_rule = realm_stability_player_only_70
+		$FACTION_TARGET$ = {
+		is_ai = no
+		}
+	}
+	modifier = {
+		add = -75
+		has_game_rule = realm_stability_player_only_75
+		$FACTION_TARGET$ = {
+		is_ai = no
+		}
+	}
+	modifier = {
+		add = -80
+		has_game_rule = realm_stability_player_only_80
+		$FACTION_TARGET$ = {
+		is_ai = no
+		}
+	}
+	modifier = {
+		add = -85
+		has_game_rule = realm_stability_player_only_85
+		$FACTION_TARGET$ = {
+		is_ai = no
+		}
+	}
+	modifier = {
+		add = -90
+		has_game_rule = realm_stability_player_only_90
+		$FACTION_TARGET$ = {
+		is_ai = no
+		}
+	}
+	modifier = {
+		add = -95
+		has_game_rule = realm_stability_player_only_95
+		$FACTION_TARGET$ = {
+		is_ai = no
+		}
+	}
+	modifier = {
+		add = -100
+		has_game_rule = realm_stability_player_only_100
+		$FACTION_TARGET$ = {
+		is_ai = no
+		}
+	}
+	modifier = {
+		add = -10000
+		has_game_rule = ultra_realm_stability_player_only_10000
+		$FACTION_TARGET$ = {
+		is_ai = no
+		}
+	}
+	modifier = {
+		add = 1000
+		has_game_rule = chaos_realm_stability_player_only
+		$FACTION_TARGET$ = {
+		is_ai = no
+		}
+	}
+
+	#safe guard to avoid Factions being created when the game starts if chaos mode is off
+	modifier = {
+		add = -10000
+		years_from_game_start < 1
+		not = { has_game_rule = chaos_realm_stability_player_only }
+		not = { has_game_rule = chaos_realm_stability_ai_only }
+		$FACTION_TARGET$.primary_title.tier = tier_duchy
+		desc = "FACTION_REASON_GAME_START_DUCHY"
+	}
+
+	modifier = {
+		add = -10000
+		years_from_game_start < 5
+		not = { has_game_rule = chaos_realm_stability_player_only }
+		not = { has_game_rule = chaos_realm_stability_ai_only }
+		$FACTION_TARGET$.primary_title.tier = tier_kingdom
+		desc = "FACTION_REASON_GAME_START_KINGDOM"
+	}
+
+	modifier = {
+		add = -10000
+		years_from_game_start < 10
+		not = { has_game_rule = chaos_realm_stability_player_only }
+		not = { has_game_rule = chaos_realm_stability_ai_only }
+		$FACTION_TARGET$.primary_title.tier = tier_empire
+		desc = "FACTION_REASON_GAME_START_EMPIRE"
+	}
+
+	modifier = { # Hostages
+		desc = "FACTION_REASON_HOSTAGE"
+		add = -50
+		any_home_court_hostage = { warden = $FACTION_TARGET$ }
+	}
+
+	modifier = {
+		desc = "FACTION_REASON_DETRACTORS_STICK_TOGETHER"
+		add = -50
+		has_trait = fp3_struggle_detractor
+		OR = {
+			culture = { has_same_culture_heritage = $FACTION_TARGET$.culture }
+			faith = $FACTION_TARGET$.faith
+		}
+		$FACTION_TARGET$ = {
+			has_trait = fp3_struggle_detractor
+		}
+	}
+
+	#FP3 Strengthern Caliphate
+	modifier = {
+		desc = "FACTION_REASON_FP3_SUPPORTER"
+		add = -50
+		global_var:fp3_struggle_ending ?= flag:fp3_struggle_strengthen_caliphate_ending
+		has_trait = fp3_struggle_supporter
+		$FACTION_TARGET$ = { has_title = title:d_sunni }
+	}
+}

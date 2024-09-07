@@ -1,0 +1,61 @@
+﻿realm_stability = {
+	default = default_realm_stability
+
+	default_realm_stability = {}
+}
+
+realm_stability_ai_only = {
+	default = realm_stability_ai_only_0
+
+    	realm_stability_ai_only_0 = {}
+    	realm_stability_ai_only_5 = {}
+	realm_stability_ai_only_10 = {}
+	realm_stability_ai_only_15 = {}
+    	realm_stability_ai_only_20 = {}
+	realm_stability_ai_only_25 = {}
+	realm_stability_ai_only_30 = {}
+	realm_stability_ai_only_35 = {}
+	realm_stability_ai_only_40 = {}
+	realm_stability_ai_only_45 = {}
+    	higher_realm_stability_ai_only_50 = {}
+	realm_stability_ai_only_55 = {}
+	realm_stability_ai_only_60 = {}
+	realm_stability_ai_only_65 = {}
+	realm_stability_ai_only_70 = {}
+	realm_stability_ai_only_75 = {}
+	realm_stability_ai_only_80 = {}
+	realm_stability_ai_only_85 = {}
+	realm_stability_ai_only_90 = {}
+	realm_stability_ai_only_95 = {}
+	extreme_realm_stability_ai_only_100 = {}
+	ultra_realm_stability_ai_only_10000 = {}
+	chaos_realm_stability_ai_only = {}
+}
+
+realm_stability_player_only = {
+	default = realm_stability_player_only_0
+
+	realm_stability_player_only_0 = {}
+	realm_stability_player_only_5 = {}
+	realm_stability_player_only_10 = {}
+	realm_stability_player_only_15 = {}
+	realm_stability_player_only_20 = {}
+	realm_stability_player_only_25 = {}
+	realm_stability_player_only_30 = {}
+	realm_stability_player_only_35 = {}
+	realm_stability_player_only_40 = {}
+	realm_stability_player_only_45 = {}
+	higher_realm_stability_player_only_50 = {}
+	realm_stability_player_only_55 = {}
+	realm_stability_player_only_60 = {}
+	realm_stability_player_only_65 = {}
+	realm_stability_player_only_70 = {}
+	realm_stability_player_only_75 = {}
+	realm_stability_player_only_80 = {}
+	realm_stability_player_only_85 = {}
+	realm_stability_player_only_90 = {}
+	realm_stability_player_only_95 = {}
+	extreme_realm_stability_player_only_100 = {}
+	ultra_realm_stability_player_only_10000 = {}
+	chaos_realm_stability_player_only = {}
+}
